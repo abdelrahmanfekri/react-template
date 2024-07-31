@@ -4,13 +4,12 @@ import React, { useEffect, useState } from "react";
 import createApolloClient from "../services/apollo";
 
 export default function ApolloWrapper({ children }) {
-  const { getAccessTokenSilently, user } = useAuth0();
+  const { getAccessTokenSilently } = useAuth0();
   const [client, setClient] = useState(null);
   useEffect(() => {
     const initializeApollo = async () => {
       const accessToken = await getAccessTokenSilently();
       const apolloClient = createApolloClient(accessToken);
-      console.log("token" + " " + accessToken);
       setClient(apolloClient);
     };
     initializeApollo();

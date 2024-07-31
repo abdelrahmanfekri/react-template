@@ -5,7 +5,7 @@ import "./index.css";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import { Auth0Provider } from "@auth0/auth0-react";
-import { audience, clientId, domain } from "./config.js";
+import { audience, clientId, domain } from "./config.ts";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

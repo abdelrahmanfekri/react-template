@@ -1,5 +1,8 @@
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
+import DashboardLayout from "./DashboardLayout";
+import Customers from "./Customers";
+import Orders from "./Orders";
+import Products from "./Products";
+import BusinessInfo from "./BusinessInfo";
+import NotFound from "./Not-Found";
 
-export { Home, About, Contact };
+export { DashboardLayout, Customers, Orders, Products, BusinessInfo, NotFound };
