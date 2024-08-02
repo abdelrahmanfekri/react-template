@@ -1,32 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import ApolloWrapper from "./context/ApolloWrapper";
-import {
-  DashboardLayout,
-  Customers,
-  Orders,
-  Products,
-  BusinessInfo,
-  NotFound,
-} from "./pages";
+import { ThemeProvider } from "./components/core/theme-provider/theme-provider";
+import { AppRouter } from "./router";
 
 function App() {
   return (
-    <Router>
-      <ApolloWrapper>
-        <Routes>
-          <Route path="/" element={<DashboardLayout />}>
-            <Route index element={<BusinessInfo />} />
-            <Route path="customers" element={<Customers />} />
-            <Route path="orders" element={<Orders />} />
-            <Route path="products" element={<Products />} />
-            <Route path="info" element={<BusinessInfo />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </ApolloWrapper>
-    </Router>
+    <ThemeProvider>
+      <AppRouter />
+    </ThemeProvider>
   );
 }
 

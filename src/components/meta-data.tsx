@@ -1,7 +1,16 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 
-function MetaData({
+interface MetaDataProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+}
+
+export function MetaData({
   title,
   description,
   keywords,
@@ -9,7 +18,7 @@ function MetaData({
   ogDescription,
   ogImage,
   ogUrl,
-}) {
+}: MetaDataProps): React.JSX.Element {
   return (
     <Helmet>
       {title && <title>{title}</title>}
@@ -24,5 +33,3 @@ function MetaData({
     </Helmet>
   );
 }
-
-export default MetaData;

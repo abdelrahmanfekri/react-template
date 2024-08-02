@@ -4,19 +4,16 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { ArrowLeft as ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr/ArrowLeft";
-import { MetaData } from "@/components/MetaData";
-import { config } from "@/config";
+import { MetaData } from "@/components/meta-data";
 import { paths } from "@/paths";
 import { Link } from "@mui/material";
 
-const metadata = {
-  title: `Not found | Errors | ${config.site.name}`,
-};
+const metadata = { title: `Not found` };
 
-export default function NotFound(): React.JSX.Element {
+export default function NotFound() {
   return (
     <>
-      <MetaData title={metadata.title} />
+      <MetaData {...metadata} />
       <Box
         component="main"
         sx={{
